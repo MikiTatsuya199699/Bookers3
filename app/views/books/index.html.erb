@@ -16,6 +16,12 @@
     <tr>
      <th>introduction</th><th><%= @user.introduction %></th>
     </tr>
+    <tr>
+      <th>フォロー数：<%= link_to "#{@user.follower.count}",relationships_show_path %></th>
+    </tr>
+    <tr>
+      <th>フォロワー数：<%= link_to "#{@user.followed.count}",relationships_show_path %></th>
+    </tr>
  </tbody>
 </table>
 
